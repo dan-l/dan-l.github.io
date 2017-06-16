@@ -1,0 +1,472 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+.github-corner:hover.octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #000000;
+    background: #333;
+    font-size: 0.9em;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding: 0 5px;
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+.fa {
+	color: black;
+}
+
+.div-center {
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.container {
+	height: 100%;
+	width: 75%;
+	overflow: scroll;
+	position: relative;
+	float:left;
+}
+
+#side {
+	height: 100%;
+	width: 25%;
+	background: white;
+	position: relative;
+	float: left;
+	padding: 40px;
+	box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21);
+}
+
+#expand-side, #shrink-side {
+	display: none;
+}
+
+.main {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* avatars */
+.avatar-img {
+	background: url("../images/avatar.png");
+	border-radius: 50%;
+	height: 96px;
+	width: 96px;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+.avatar-gotron {
+	background: url("../images/go-tron-icon.png");
+	border-radius: 50%;
+	height: 96px;
+	width: 96px;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+.avatar-wutudu {
+	background: url("../images/wutudu.png");
+	border-radius: 50%;
+	height: 96px;
+	width: 96px;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+.avatar-vibernate {
+	background: url("../images/vibernate.png");
+	border-radius: 50%;
+	height: 96px;
+	width: 96px;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+.avatar-wheresthefood {
+	background: url("../images/wtf.gif");
+	border-radius: 50%;
+	height: 96px;
+	width: 96px;
+	box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+/* end of avatars */
+
+/* Skills progress bar */
+.skills-area {
+	padding: 10px;
+}
+
+.bufferbar {
+	position: relative;
+	padding: 3px;
+}
+
+.buffer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4px;
+	width: 100%;
+	background: linear-gradient(to right,rgba(255,255,255,.7),
+		rgba(255,255,255,.7)),linear-gradient(to right,#3f51b5 ,#3f51b5)
+}
+
+.progress {
+	height: 4px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background: #3f51b5;
+}
+
+.progress.web {
+	width: 95%;
+}
+
+.progress.mobile {
+	width: 90%;
+}
+
+.progress.oop {
+	width: 90%;
+}
+
+.progress.database {
+	width: 85%;
+}
+/* end of skills progress bar */
+
+/* main section */
+.main > section {
+	position: absolute;
+	width: 40%;
+	min-width: 320px;
+	height: 100%;
+	box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21);
+}
+
+.main > section:nth-child(1)  {
+	left: 0;
+	background: #0DC5C1;
+}
+
+.main > section:nth-child(2) {
+	left: 35%; /*want it to stack of the edge and main > section width is 40*/
+	background: #AD1457;
+}
+
+.main > section:nth-child(3) {
+	left: 70%;
+	background: #009688;
+}
+
+.main > section:nth-child(4) {
+	left: 105%;
+	background: #FDD835;
+}
+
+.main > section .icon-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 100;
+	opacity: 0;
+	pointer-events: none;
+	color: #000000;
+}
+/* end of main section */
+
+/* box */
+.box {
+	position: absolute;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	/* Centering with flexbox */
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.box h2 {
+	text-align: center;
+	margin-left: -50%;
+	width: 100%;
+	font-size: 1.8em;
+	letter-spacing: 2px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* end of box */
+
+/* Section expanded */
+.main.expand-item {
+	overflow: hidden;
+}
+.main > section.expand {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.main > section.expand-top {
+	z-index: 100;
+}
+
+.main > section.expand.expand-top  {
+	background: #FAFAFA;
+}
+
+.main > section.expand-top .top-bar {
+	height: 20%;
+}
+
+.main > section:nth-child(1).expand-top .top-bar {
+	background: #0DC5C1;
+}
+
+.main > section:nth-child(2).expand-top .top-bar {
+	background: #AD1457;
+}
+
+.main > section:nth-child(3).expand-top .top-bar {
+	background: #009688;
+}
+
+.main > section:nth-child(4).expand-top .top-bar {
+	background: #FDD835;
+}
+
+.main > section.expand-top .bottom-bar {
+	height: 80%;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.main > section article {
+	position: relative;
+	background: #FFFFFF;
+	margin-top: -10%;
+	padding: 20px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.main > section article a {
+	color: #1A237E;
+}
+/* end of section expanded */
+
+/* content */
+.content {
+	opacity: 0;
+	pointer-events: none;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.content p {
+	margin: 0 auto;
+	padding-bottom: 15px;
+	font-size: 1 em;
+	line-height: 1.8;
+}
+
+.content h2 {
+	font-size: 3em;
+	font-weight: 300;
+	margin: 0 0 20px 0;
+}
+
+.content article {
+	padding: 20px 40px 20px 0px;
+}
+
+.content article h3 {
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 0 10px 0;
+	padding-top: 20px;
+	font-size: 1.4em;
+}
+
+.content article a {
+	color: rgba(0,0,0,0.2);
+}
+/* end of content */
+
+/* Transition classes and properties */
+/* Separated for a better overview and control */
+.main > section {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.main.expand-item > section:not(.expand),
+.main.expand-item > section.scale-down {
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	opacity: 0;
+}
+
+.box {
+	-webkit-transition: opacity 0.2s linear 0.5s;
+	-moz-transition: opacity 0.2s linear 0.5s;
+	transition: opacity 0.2s linear 0.5s;
+}
+
+section.expand .box {
+	opacity: 0;
+	-webkit-transition: opacity 0s linear;
+	-moz-transition: opacity 0s linear;
+	transition: opacity 0s linear;
+}
+
+.box h2 {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.no-touch section:not(.expand) .box:hover h2 {
+	-webkit-transform: translateY(-15px);
+	-moz-transform: translateY(-15px);
+	-ms-transform: translateY(-15px);
+	transform: translateY(-15px);
+}
+
+.content,
+.icon-close {
+	-webkit-transition: opacity 0.1s linear 0s;
+	-moz-transition: opacity 0.1s linear 0s;
+	transition: opacity 0.1s linear 0s;
+}
+
+section.expand .content,
+section.expand .icon-close {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s linear 0.5s;
+	-moz-transition: opacity 0.3s linear 0.5s;
+	transition: opacity 0.3s linear 0.5s;
+}
+
+/* video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* end of video */
+
+@media screen and (max-width: 500px) {
+	.container {
+		width: 100%;
+	}
+
+	#side {
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		position: fixed;
+		bottom: 0;
+		height: 0;
+		width: 100%;
+		background: white;
+		padding: 20px 10px;
+	}
+
+	#side.expand {
+		height: 100%;
+	}
+
+	#side #expand-side, #side.expand #shrink-side {
+		display: block;
+	}
+
+	#side #shrink-side, #side.expand #expand-side {
+		display: none;
+	}
+
+	#side article{
+		display: none;
+	}
+
+	#side.expand article {
+		display: block;
+	}
+
+	.main > section {
+		left: 0 !important;
+		position: relative;
+		height: 50%;
+		min-height: 240px;
+		width: 100%;
+	}
+
+}
