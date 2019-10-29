@@ -39,7 +39,6 @@
 			// expand the clicked section and scale down the others
 			$section.addEventListener("click", function(event) {
 				if (!$section.getAttribute("open")) {
-					rememberScrollPos(opt);
 					$section.setAttribute("open", true);
 					addClass($section, "expand");
 					addClass($section, "expand-top");
